@@ -1,10 +1,14 @@
-body, .gradient {
-    background: #1D4350;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body,
+.gradient {
+    background: #1D4350;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A43931, #1D4350);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A43931, #1D4350);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.header > h1 {
+.title>h1 {
     color: white;
     text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
 }
@@ -14,32 +18,46 @@ body, .gradient {
     margin-bottom: 1em;
 }
 
-.darkpage > .nadpis {
+.darkpage>.nadpis {
     color: orange;
 }
 
-.lightpage > .nadpis {
+.lightpage>.nadpis {
     color: teal;
     text-shadow: none;
 }
 
 .darkpage {
-    background: url(img/site/texture.png) #141419 repeat;
+    background: #141419;
     color: white;
-    padding: 1em;
 }
 
 .lightpage {
-    background: url(img/site/texture.png) #fff repeat;
+    background-color: #fff;
     color: black;
     padding: 1em;
-    margin: 0em -1em -1em -0em;
+    margin-bottom: -1em;
 }
 
-.header {
+.noise {
+    background: url(img/texture.png) repeat;
+}
+
+.title {
     margin: 2em;
 }
 
 .page {
-    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+
+#animace {
+    width: 100%;
+    opacity: 0.5;
+    image-rendering: pixelated;
+}
+
+#anim-container {
+    mix-blend-mode: overlay;
 }
