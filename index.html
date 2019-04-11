@@ -21,28 +21,46 @@
 		</div>
 
 		<div class="page darkpage">
-			<h4 id="title" class="darkpage nadpis">Nadpis</h4>
-			<div class="row">
-				<div class="noise col-md-2">
-					<h6>Menu</h6>
+			<h4 id="title" class="nadpis" style="margin-bottom: 0.5em;">Domů</h4>
 
+			<div class="row">
+
+				<div class="col-md-2" style="border-top: 1px dotted darkslategray">
+					<br>
+					<h6>Menu
+						<button class="d-md-none float-right" type="button" data-toggle="collapse" data-target="#menu">...</button>
+					</h6>
+					<div class="collapse.show" id="menu">
+						<div class="nav flex-column nav-pills" id="menu-tab" role="tablist" aria-orientation="vertical">
+							<a class="nav-link active" id="menu-home-tab" data-toggle="pill" href="#main" role="tab">Domů</a>
+							<a class="nav-link" id="menu-profile-tab" data-toggle="pill" href="#programy" role="tab">Programy</a>
+						</div>
+					</div>
+					<br>
 				</div>
+
 				<div id="content" class="lightpage col-md">
-					testík
-					<h4 class="nadpis">Nadpis</h4>
+					<div class="tab-content">
+						
+						<div class="tab-pane fade show active" id="main" role="tabpanel">
+							1
+						</div>
+						
+						<div class="tab-pane fade" id="programy" role="tabpanel">
+							2
+						</div>
+						
+					</div>
 				</div>
+
 			</div>
 		</div>
 
 	</div>
 
 	<div id="anim-container" class="d-flex justify-content-center fixed-bottom">
-		<canvas id="animace" width="480" height="150"></canvas>
+		<canvas id="animace" width="450" height="150"></canvas>
 	</div>
-
-	<script type="text/view" id="homeView" title="Testovací view">
-		Tohle by mělo <b>fungovat</b>
-	</script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

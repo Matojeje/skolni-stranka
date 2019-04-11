@@ -1,10 +1,14 @@
 function onload() {
 
+	$(".nav-link").click(function() {
+		document.getElementById("title").innerHTML = this.innerHTML;
+	});
+
 	// Canvas setup
 	canvas = document.getElementById('animace');
 	ctx = canvas.getContext('2d');
 
-	fps = 60;
+	fps = 50;
 	thickness = 3;
 	gap = 1;
 	barCount = canvas.width / (thickness + gap);
