@@ -2,75 +2,66 @@
 <html lang="cs">
 
 <head>
-	<title>Tvorba hudby</title>
-	<meta charset="utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="MD">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-	<script src="main.js"></script>
+  <title>Tvorba hudby</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="MD">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script src="main.js"></script>
+  <script src="flexibility.js"></script> <!-- https://github.com/jonathantneal/flexibility -->
 </head>
 
 <body onload="onload()">
-	<div class="container">
+  <div class="container">
+    <div class="title">
+      <h1>Tvorba hudby</h1>
+    </div>
 
-		<div class="title">
-			<h1>Tvorba hudby</h1>
-		</div>
+    <div class="page darkpage">
+      <h4 class="nadpis">Domovská stránka</h4>
 
-		<div class="page darkpage">
-			<h4 id="title" class="nadpis" style="margin-bottom: 0.5em;">Domů</h4>
+      <div class="flex" id="mainrow">
 
-			<div class="row">
+        <div class="menu">
+          <br>
+          <div class="flex flex-col flex-stretch" role="tablist" aria-orientation="vertical" id="menucol">
+            <a class="stranka tady" . role="tab" href="/index.html">Domů</a>
+            <a class="stranka" ...... role="tab" href="/technologie/index.html">Technologie</a>
+            <a class="stranka indent" role="tab" href="/technologie/midi.html">MIDI</a>
+            <a class="stranka indent" role="tab" href="/technologie/vst.html">VST</a>
+            <a class="stranka" ...... role="tab" href="/programy/index.html">Programy</a>
+            <a class="stranka indent" role="tab" href="/programy/note.html">Notační</a>
+            <a class="stranka indent" role="tab" href="/programy/wave.html">Audio editor</a>
+            <a class="stranka indent" role="tab" href="/programy/tracker.html">Tracker</a>
+            <a class="stranka indent" role="tab" href="/programy/daw.html">DAW</a>
+            <a class="stranka" ...... role="tab" href="/techniky/index.html">Techniky</a>
+            <a class="stranka indent" role="tab" href="/techniky/sidechain.html">Sidechain</a>
+            <a class="stranka indent" role="tab" href="/techniky/vocoder.html">Vocoding</a>
+            <a class="stranka indent" role="tab" href="/techniky/surround.html">Surround</a>
+            <a class="stranka" ...... role="tab" href="/mp3.html">Komprese</a>
+            <a class="stranka" ...... role="tab" href="/share.html">Distribuce</a>
+          </div>
+          <br>
+        </div>
 
-				<div class="col-md-2" style="border-top: 1px dotted darkslategray">
-					<br>
-					<h6>Menu
-						<button class="d-md-none float-right" type="button" data-toggle="collapse" data-target="#menu">...</button>
-					</h6>
-					<div class="collapse.show" id="menu">
-						<div class="nav flex-column nav-pills" id="menu-tab" role="tablist" aria-orientation="vertical">
-							<a class="nav-link active" id="menu-home-tab" data-toggle="pill" href="#main" role="tab">Domů</a>
-							<a class="nav-link" id="menu-profile-tab" data-toggle="pill" href="#programy" role="tab">Programy</a>
-						</div>
-					</div>
-					<br>
-				</div>
+        <div class="lightpage content">
+          <h2>Úvod</h2>
+          <p>V dnešní době umožňují tvořit hudbu nejenom počítače, ale dokonce i mobily. Existuje na to několik typů
+            programů a aplikací, většinou založených na standardu <a href="/technologie/midi.html">MIDI</a>, které vám
+            takovou tvorbu dovolí. S těmito typy vás představím a uvedu pár příkladů včetně popisu souvisejících
+            technik.</p>
+          <p><kbd>←</kbd> Vyberte si téma z nabídky vpravo!</p>
+        </div>
 
-				<div id="content" class="lightpage col-md">
-					<div class="tab-content">
-						
-						<div class="tab-pane fade show active" id="main" role="tabpanel">
-							1
-						</div>
-						
-						<div class="tab-pane fade" id="programy" role="tabpanel">
-							2
-						</div>
-						
-					</div>
-				</div>
+      </div>
 
-			</div>
-		</div>
+    </div>
+    <br>
+    <p class="foot">Matouš Dřízhal 2019</p>
+  </div>
 
-	</div>
-
-	<div id="anim-container" class="d-flex justify-content-center fixed-bottom">
-		<canvas id="animace" width="450" height="150"></canvas>
-	</div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
 </body>
 
 </html>

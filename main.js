@@ -1,14 +1,17 @@
 function onload() {
 
-	$(".nav-link").click(function() {
-		document.getElementById("title").innerHTML = this.innerHTML;
-	});
+	flexibility(document.getElementById("mainrow"));
+	flexibility(document.getElementById("menucol"));
 
-	// Canvas setup
+	/* $(".nav-link").click(function() {
+		document.getElementById("title").innerHTML = this.innerHTML;
+	}); */
+
+	/* // Canvas setup
 	canvas = document.getElementById('animace');
 	ctx = canvas.getContext('2d');
 
-	fps = 50;
+	fps = 45;
 	thickness = 3;
 	gap = 1;
 	barCount = canvas.width / (thickness + gap);
@@ -16,13 +19,13 @@ function onload() {
 	bar = [];
 	for (let i = 0; i < barCount; i++) {
 		bar[i] = {
-			position: Math.random() * (canvas.height / 2) + (canvas.height / 2) - (Math.sin((i / barCount + 0.5) * Math.PI) * canvas.height / 3),
-			speed: Math.random() * (canvas.height) + 80
+			position: Math.floor(Math.random() * (canvas.height / 2) + (canvas.height / 2) - (Math.sin((i / barCount + 0.5) * Math.PI) * canvas.height / 3)),
+			speed: Math.floor(Math.random() * (canvas.height) + 80)
 		}
 	}
 
 	frame = 0;
-	setInterval(draw, 1000 / fps);
+	// setInterval(draw, Math.floor(1000 / fps)); */
 }
 
 function displayView(view) {
@@ -40,7 +43,7 @@ function draw() {
 		ctx.fillStyle = `hsla(${hue}, 100%, 50%, 0.35)`;
 		ctx.fillRect(
 			i * (thickness + gap),
-			Math.sin((i / barCount * 4 + frame / 600) * Math.PI) * canvas.height / 2 + canvas.height / 2,
+			Math.floor(Math.sin((i / barCount * 4 + frame / 600) * Math.PI) * canvas.height / 2 + canvas.height / 2),
 			thickness,
 			3
 		);

@@ -1,48 +1,101 @@
-body,
-.gradient {
-    background: #1D4350;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A43931, #1D4350);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A43931, #1D4350);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:300&display=swap&subset=latin-ext');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #1D4350; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A43931, #1D4350); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
 }
 
-.title>h1 {
+.title > h1 {
+    font-family: 'Ubuntu', 'Trebuchet MS', sans-serif;
     color: white;
     text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-.nadpis {
-    color: orange;
-    text-shadow: 1px 3px 5px black;
-    margin-bottom: 1em;
+.content > h2 {
+    padding-left: 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom-right-radius: 15%;
 }
 
-.lightpage>.nadpis {
+.content > h3 {
+    padding-left: 0.4em;
+}
+
+.nadpis {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    color: orange;
+    text-shadow: 1px 3px 5px black;
+    margin-block-start: 0.8em;
+}
+
+.lightpage > .nadpis {
     color: teal;
     text-shadow: none;
 }
 
+.menu {
+    width: 140px;
+    border-top: 1px dotted darkslategray;
+}
+
+.stranka {
+    color:rgba(255, 255, 255, 0.95);
+    transition: color 0.1s ease-out, padding 0.1s ease-out, border 0.2s ease-in-out;
+    margin-top: 3px;
+}
+
+.stranka:hover {
+    color:orange;
+    border-left: 2px solid mediumspringgreen;
+    padding-left: 0.3em;
+}
+
+.tady {
+    color: yellow;
+    text-decoration-style: double;
+    cursor: no-drop;
+}
+
+.tady:hover {
+    border-left: 2px solid cyan;
+}
+
+.stranka.indent {
+    border-left: 1px dotted darkslategray;
+    padding-left: 1em;
+    margin-top: -3px;
+}
+
+.stranka.indent:hover {
+    padding-left: 1.3em;
+    border-left: 2px solid yellow;
+}
+
+.content {
+    width: 100%;
+    text-align: justify;
+}
+
 .darkpage {
-    background: #141419;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #18181f, #000000);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #18181f, #000000);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #141419; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #18181f, #000000); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #18181f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
 }
 
 .lightpage {
-    background-color: #fff;
+    background: #fff;
+    background: url(img/noise.png) repeat, #fff;
     color: black;
     padding: 1em;
     margin-bottom: -1em;
 }
 
 .noise {
-    background: url(img/texture.png) repeat;
+    background: url(img/noise.png) repeat;
 }
 
 .title {
@@ -52,6 +105,10 @@ body,
 .page {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     padding: 1em;
+}
+
+.foot {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 #animace {
@@ -64,6 +121,53 @@ body,
     mix-blend-mode: overlay;
 }
 
-.nav-link.active {
-    background-color: #ffd00017;
+.container { /* ukradeno z Bootstrapu */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.flex {
+    -js-display: flex;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox
+}
+
+.flex-col {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-stretch {
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+dfn, abbr, acronym {
+    border-bottom: rgba(0, 0, 0, 0.4) 1px dotted;
+    cursor: help;
 }
