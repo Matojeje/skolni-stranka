@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<title>Tvorba hudby</title>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+	<meta name="description" content="">
+	<meta name="author" content="MD">
+	<meta name="theme-color" content="#1D4350">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/main.css">
+	<script src="/main.js"></script>
+	<script src="/flexibility.js"></script> <!-- https://github.com/jonathantneal/flexibility -->
+</head>
+
+<body onload="onload()">
+	<div class="container">
+		<div class="title">
+			<h1>Tvorba hudby</h1>
+		</div>
+
+		<div class="page darkpage">
+			<h4 class="nadpis">Programy na editaci zvukových vln</h4>
+
+			<div class="flex" id="mainrow">
+
+				<div class="menu">
+					<br>
+					<div class="flex flex-col flex-stretch" role="tablist" aria-orientation="vertical" id="menucol">
+						<a class="stranka tady" . role="tab" href="/index.html">Domů</a>
+						<div class="whiteline"></div>
+						<a class="stranka" ...... role="tab">Technologie</a>
+						<a class="stranka indent" role="tab" href="/technologie/midi.html">MIDI</a>
+						<a class="stranka indent" role="tab" href="/technologie/vst.html">VST</a>
+						<a class="stranka tadykat" ...... role="tab">Programy</a>
+						<a class="stranka indent" role="tab" href="/programy/note.html">Notační</a>
+						<a class="stranka indent tady" role="tab" href="/programy/wave.html">Audio editor</a>
+						<a class="stranka indent" role="tab" href="/programy/tracker.html">Tracker</a>
+						<a class="stranka indent" role="tab" href="/programy/daw.html">DAW</a>
+						<a class="stranka" ...... role="tab">Techniky</a>
+						<a class="stranka indent" role="tab" href="/techniky/sidechain.html">Sidechain</a>
+						<a class="stranka indent" role="tab" href="/techniky/vocoder.html">Vocoding</a>
+						<a class="stranka indent" role="tab" href="/techniky/surround.html">Surround</a>
+						<div class="whiteline"></div>
+						<a class="stranka" ...... role="tab" href="/mus">Ukázky hudby</a>
+						<a class="stranka" ...... role="tab" href="/img/sshot">Screenshoty</a>
+					</div>
+					<br>
+				</div>
+
+				<div class="lightpage content">
+					<p>Audio je zvukový záznam složený ze zvukových vzorků v určité bitové hloubce přesnosti a
+						frekvenci. Programy na jeho editaci patří k nejznámějším ze všech hudebních programů.</p>
+
+					<h2>Střih</h2>
+
+					<p>Nejrozšířenější hudební program, Audacity, slouží hlavně k mixování a střihu různých zvukových
+						stop. Obsahuje jen pár základních efektů, ale přímou editaci zvuku zvládá perfektně. Na
+						screenshotu je vidět, jak se v něm dají upravovat i konkrétní stopy prostorového (surround)
+						zvuku.</p>
+
+					<img src="/img/sshot/Audacity.png">
+					<p class="popisek">Audacity<br>Freeware</p>
+
+					<p>Něco, co jsem ještě u jiných programů neviděl, je schopnost nahrát raw (nezpracovaná) zvuková
+						data v zadaném formátu z jakéhokoliv souboru.</p>
+
+					<h2>Úprava</h2>
+
+					<p>V době pokročilé techniky lze díky Fourierově analýze rozložit zvuk na základní sinusoidy, a
+						některé z nich pak vyrušit: Jde ze zvuku vymazat určité frekvence a jejich harmonické tóny.</p>
+
+					<img src="/img/sshot/SpectraLayers.jpg">
+					<p class="popisek">SpectraLayers<br>Separace grafickou metodou</p>
+
+					<p>Mimo separace hudebních nástrojů umožňuje analýza spektrogramu také z hudby odstranit nebo ztišit
+						například ozvěnu nebo dozvuk.</p>
+
+					<img src="/img/sshot/ISSE.png">
+					<p class="popisek">ISSE<br>Freeware</p>
+				</div>
+
+			</div>
+
+		</div>
+		<br>
+		<p class="foot">Matouš Dřízhal 2019</p>
+	</div>
+
+</body>
+
+</html>

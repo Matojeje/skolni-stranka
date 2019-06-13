@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<title>Tvorba hudby</title>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+	<meta name="description" content="">
+	<meta name="author" content="MD">
+	<meta name="theme-color" content="#1D4350">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/main.css">
+	<script src="/main.js"></script>
+	<script src="/flexibility.js"></script> <!-- https://github.com/jonathantneal/flexibility -->
+</head>
+
+<body onload="onload()">
+	<div class="container">
+		<div class="title">
+			<h1>Tvorba hudby</h1>
+		</div>
+
+		<div class="page darkpage">
+			<h4 class="nadpis">Programy: Audio trackery</h4>
+
+			<div class="flex" id="mainrow">
+
+				<div class="menu">
+					<br>
+					<div class="flex flex-col flex-stretch" role="tablist" aria-orientation="vertical" id="menucol">
+						<a class="stranka" . role="tab" href="/index.html">Domů</a>
+						<div class="whiteline"></div>
+						<a class="stranka" ...... role="tab">Technologie</a>
+						<a class="stranka indent" role="tab" href="/technologie/midi.html">MIDI</a>
+						<a class="stranka indent" role="tab" href="/technologie/vst.html">VST</a>
+						<a class="stranka tadykat" ...... role="tab">Programy</a>
+						<a class="stranka indent" role="tab" href="/programy/note.html">Notační</a>
+						<a class="stranka indent" role="tab" href="/programy/wave.html">Audio editor</a>
+						<a class="stranka indent tady" role="tab" href="/programy/tracker.html">Tracker</a>
+						<a class="stranka indent" role="tab" href="/programy/daw.html">DAW</a>
+						<a class="stranka" ...... role="tab">Techniky</a>
+						<a class="stranka indent" role="tab" href="/techniky/sidechain.html">Sidechain</a>
+						<a class="stranka indent" role="tab" href="/techniky/vocoder.html">Vocoding</a>
+						<a class="stranka indent" role="tab" href="/techniky/surround.html">Surround</a>
+						<div class="whiteline"></div>
+						<a class="stranka" ...... role="tab" href="/mus">Ukázky hudby</a>
+						<a class="stranka" ...... role="tab" href="/img/sshot">Screenshoty</a>
+					</div>
+					<br>
+				</div>
+
+				<div class="lightpage content">
+					<h2>Co je to tracker?</h2>
+					<p>Tracker je typ programu, který umožňuje skládání hudby psaním not do vertikální notové osy v
+						podobě mřížky s více stopami. Každá zvuková stopa obsahuje číslo nástroje, výšku tónu,
+						hlasitost, volitelný efekt a jeho parametry. Program interpoluje zvukové vzorky podle vybraného
+						nástroje.</p>
+
+					<img src="/img/sshot/Protracker.png">
+					<p class="popisek">ProTracker (1990, Amiga OS)</p>
+
+					<p>Tento typ hudebních programů byl nejvíce používaný v 90. letech k tvoření
+						hudby pro limitované zvukové karty počítačů té doby (Amiga, DOS, Atari ST). V dnešní době také
+						existují specializované trackery používají pro skládání hudby podle limitací starších domácích
+						konzolí (FamiTracker). Kolem trackerové hudby stále existuje tzv. "demo" komunita.</p>
+
+					<p>Dnes je trackerová hudba používána v "keygenech" a pro ušetření místa během vývoje her. Moderní
+						trackery (OpenMPT, ImpulseTracker) a jejich formáty a efekty umožňují tvořit realistickou hudbu
+						díky možnosti použití mnohem větších zvukových vzorků.</p>
+
+					<img src="/img/sshot/0CCFamitracker.png">
+					<p class="popisek">0CC-FamiTracker (2015, Windows)</p>
+
+					<p>Mezi nejběžnější formáty patří <em>.mod</em>, <em>.xm</em> a <em>.it</em>. K distribuci je
+						nejvhodnější formát <em>.mo3</em> podporující zvukové vzorky ve ztrátových formátech
+						<em>mp3</em> a <em>ogg</em>. Mezi formáty herní hudby poté patří NSF (NES), SPC (SNES), GYM
+						(Genesis), GSF (GBA) a VGM (PS1).</p>
+
+					<p>Alternativu k používání trackerové hudby i přes nespočet dostupných přehrávacích knihoven tvoří
+						dvojice MIDI souboru s vlastním soundfontem, do něhož např. rippuje program VGMTrans. Ten ale
+						nemá k dispozici trackerové efekty.<a href="#note">*</a></p>
+
+					<h2>Interaktivní ukázka</h2>
+
+					<embed src="/jsxm/index.html" width="100%" height=900>
+
+					<div class="popisek">
+						Adaptace FastTrackeru (.xm) v JavaScriptu<br>
+						<a href="https://github.com/a1k0n/jsxm/">github.com/a1k0n/jsxm</a>
+					</div>
+
+					<hr>
+
+					<p id="note">* Existuje speciální formát MIDI souboru s vestavěným DLS soundfontem, zvaný RIFF MIDI,
+						ten ale nikdy
+						nebyl implementován v žádném přehrávači kromě programů firmy Awave.</p>
+				</div>
+
+			</div>
+
+		</div>
+		<br>
+		<p class="foot">Matouš Dřízhal 2019</p>
+	</div>
+
+</body>
+
+</html>
